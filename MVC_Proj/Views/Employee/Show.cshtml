@@ -1,0 +1,36 @@
+﻿@model MVC_Proj.Models.Entities.Employee
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<div class="container my-5">
+    <div class="card shadow-sm rounded-4">
+        <div class="card-header bg-info text-white">
+        <h2 class="my-4 text-info">Employee Details</h2>
+
+            <div class="card shadow-sm p-4">
+                <div class="mb-3">
+                    <label class="form-label">Employee ID</label>
+                    <input type="text" class="form-control" value="@Model.EmployeeId" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Employee Name</label>
+                    <input type="text" class="form-control" value="@Model.EmployeeName" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Position</label>
+                    <input type="text" class="form-control" value="@Model.EmployeePosition" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Department</label>
+                    <input type="text" class="form-control" value="@Model.EmployeeDepartment" readonly>
+                </div>
+
+                <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

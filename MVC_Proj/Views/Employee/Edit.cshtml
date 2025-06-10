@@ -1,0 +1,39 @@
+﻿@model MVC_Proj.Models.Entities.Employee
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+
+<div class="container my-5">
+    <div class="card shadow-sm rounded-4">
+        <div class="card-header bg-warning text-dark">
+            <h3 class="mb-0">Edit Employee</h3>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label for="EmployeeId" class="form-label">Employee ID</label>
+                    <input type="number" class="form-control" id="EmployeeId" name="EmployeeId" value="@Model.EmployeeId" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label for="EmployeeName" class="form-label">Employee Name</label>
+                    <input type="text" class="form-control" id="EmployeeName" name="EmployeeName" value="@Model.EmployeeName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="EmployeePosition" class="form-label">Position</label>
+                    <input type="text" class="form-control" id="EmployeePosition" name="EmployeePosition" value="@Model.EmployeePosition" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="EmployeeDepartment" class="form-label">Department</label>
+                    <input type="text" class="form-control" id="EmployeeDepartment" name="EmployeeDepartment" value="@Model.EmployeeDepartment" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update Employee</button>
+            </form>
+        </div>
+    </div>
+</div>
